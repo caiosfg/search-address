@@ -10,12 +10,14 @@
     <%= link_to "New adress", new_adress_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
   </div>
 
-  <div id="adresses" class="min-w-full">
+  <div id="adresses" class="min-w-full border-2	rounded p-4 my-2 grid grid-rows-3 grid-flow-col gap-4">
     <% @adresses.each do |adress| %>
-      <%= render adress %>
-      <p>
-        <%= link_to "Show this adress", adress, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-      </p>
+      <div>
+        <%= render adress %>
+        <p>
+          <%= link_to "Show this adress", adress, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 hover:bg-gray-200 inline-block font-medium" %>
+        </p>
+      </div>
     <% end %>
   </div>
 </div>

@@ -1,17 +1,30 @@
-<div id="<%= dom_id adress %>">
+<div id="<%= dom_id adress %>" class="max-w-sm rounded overflow-hidden shadow-lg hover:bg-slate-100	p-4 my-4">
+  <div class="flex items-center justify-center">
+    <% if adress.image.present? %>
+      <%= image_tag adress.image, class: "w-48 h-48 rounded" %>
+    <% else %>
+      <%= image_tag("no-image.jpg", width: 192) %>
+    <% end %>
+  </div>
   <p class="my-5">
-    <strong class="block font-medium mb-1">Title:</strong>
-    <%= adress.title %>
+    <strong class="block font-bold mb-1">Title:</strong>
+    <span class="font-light text-slate-500">
+      <%= adress.title %>
+    </span>
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Description:</strong>
-    <%= adress.description %>
+    <strong class="block font-bold mb-1">Description:</strong>
+    <span class="font-light text-slate-500">
+      <%= adress.description %>
+    </span>
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Location:</strong>
-    <%= adress.location %>
+    <strong class="block font-bold mb-1">Location:</strong>
+    <span class="font-light text-slate-500">
+      <%= adress.location %>
+    </span>
   </p>
 
 </div>

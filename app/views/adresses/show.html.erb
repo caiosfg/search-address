@@ -6,10 +6,10 @@
 
     <%= render @adress %>
 
-    <%= link_to "Edit this adress", edit_adress_path(@adress), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to "Back to adresses", adresses_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Edit this adress", edit_adress_path(@adress), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 hover:bg-gray-200 inline-block font-medium" %>
+    <%= link_to "Back to adresses", adresses_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 hover:bg-gray-200 inline-block font-medium" %>
     <div class="inline-block ml-2">
-      <%= button_to "Destroy this adress", @adress, method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+      <%= button_to "Destroy this adress", @adress, method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 hover:bg-gray-200 font-medium" %>
     </div>
   </div>
 </div>
